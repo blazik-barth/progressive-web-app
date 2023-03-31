@@ -1,0 +1,19 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+div.screen {border: 1px black solid; display:none;}
+
+div.stat-screen {text-align: center;}
+
+div.mdc-card {
+	width: 200px;
+	display: none;
+	text-align: center;
+}
+
+#map {
+	width: 500px;
+	height: 500px;
+}

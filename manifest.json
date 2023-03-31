@@ -1,0 +1,17 @@
+{
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "name": "Bart's Cool App",
+  "short_name": "bartapp",
+  "description": "app for cool people (i am the only cool person)",
+  "display": "standalone",
+  "start_url": "/?utm_source=homescreen",
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "outage.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }
+  ]
+}

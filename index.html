@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+	<link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+	<!-- why do buttons work differently depending whether you click the text or the background? what meaningful difference does this make? -->
+	<button class="mdc-button" id="div-button">
+   <span class="mdc-button__ripple" data-screen="div1"></span>
+   <span class="mdc-button__label" data-screen="div1">Div 1</span>
+	</button>
+
+	<button class="mdc-button" id="div-button">
+   <span class="mdc-button__ripple" data-screen="div2"></span>
+   <span class="mdc-button__label" data-screen="div2">Div 2</span>
+	</button>
+
+	<button class="mdc-button" id="div-button">
+   <span class="mdc-button__ripple" data-screen="div3"></span>
+   <span class="mdc-button__label" data-screen="div3">Div 3</span>
+	</button>
+
+	<button class="mdc-button" id="div-button">
+   <span class="mdc-button__ripple" data-screen="div4"></span>
+   <span class="mdc-button__label" data-screen="div4">Div 4</span>
+	</button>
+	
+	<div id="div1" class="screen">
+		<!-- I really did want, and try, to use Material components for this selection, but i couldn't wrap my head around all the different sub-objects within every object-->
+		<label for="type">Select a type to search for:</label>
+		<select name="type" id="type">
+			<option value="normal">Normal</option>
+			<option value="fire">Fire</option>
+			<option value="water">Water</option>
+			<option value="grass">Grass</option>
+			<option value="electric">Electric</option>
+			<option value="ice">Ice</option>
+			<option value="fighting">Fighting</option>
+			<option value="poison">Poison</option>
+			<option value="ground">Ground</option>
+			<option value="flying">Flying</option>
+			<option value="psychic">Psychic</option>
+			<option value="bug">Bug</option>
+			<option value="rock">Rock</option>
+			<option value="ghost">Ghost</option>
+			<option value="dark">Dark</option>
+			<option value="dragon">Dragon</option>
+			<option value="steel">Steel</option>
+			<option value="fairy">Fairy</option>
+		</select>
+
+		<button class="mdc-button" id="search-button">	
+	   <span class="mdc-button__ripple"></span>
+	   <span class="mdc-button__label">Search for type!</span>
+		</button>
+  </div>
+
+  <div id="div2" class="screen">
+		<div class="mdc-card mdc-card--outlined">
+		  <h6 class="pokemon-name mdc-typography--headline6"></h6>
+			<img class="pokemon-sprite">
+		</div>
+  </div>
+
+	<div id="div3" class="screen stat-screen">
+		<h4 class="stat-name mdc-typography--headline4"></h4>
+		<canvas class="stat-canvas" width="500" height="300">
+		Error loading canvas. Please try a different browser.
+	</canvas>
+	</div>
+
+	<div id="div4" class="screen">
+		<div id="map"></div>
+	</div>
+  
+
+ <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
+
+	<!--
+	<script>
+		if ('serviceWorker' in navigator) {
+  		navigator.serviceWorker.register('./sw.js');
+		}
+	</script>
+	-->
+	<script src="script.js"></script>
+	<script>
+		if ('serviceWorker' in navigator) {
+  		navigator.serviceWorker.register('./sw.js');
+		}
+	</script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9V_QP-WDlWgabUP9FGpXjszLMI4IuYZQ&callback=initMap&v=weekly" defer></script>
+	
+</body>
+
+</html>
